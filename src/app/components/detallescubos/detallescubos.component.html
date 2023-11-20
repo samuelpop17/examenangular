@@ -1,0 +1,40 @@
+<div class="container mt-4">
+
+    <div class="row">
+        <div class="col-md-4" *ngIf="cubo">
+            <div class="card mb-4 ">
+                <img src="{{cubo.imagen}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{cubo.nombre}}</h5>
+                    <h5 class="card-title">{{cubo.modelo}}</h5>
+                    <h5 class="card-title">{{cubo.marca}}</h5>
+                    <h5 class="card-title">{{cubo.color}}</h5>
+                    <h5 class="card-title">{{cubo.precio}}</h5>
+                    <h5 class="card-title">{{cubo.valoracion}}</h5>
+                    <h5 class="card-title">{{cubo.idCubo}}</h5>
+
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <div class="card-body text-center">
+                    <a [routerLink]="['/detallescubos/',cubo.idCubo]" class="btn btn-outline-info">Detalles</a>
+                </div>
+            </div>
+
+            <div class="comentarios" *ngIf="comentarios && comentarios.length > 0; else noComentarios">
+                <table>
+                    <tr *ngFor="let comentario of comentarios; let i=index">
+                        <td>{{comentario.fechaComentario}}</td>
+                        <td>{{comentario.comentario}}</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <ng-template #noComentarios>
+                <h2>No hay comentarios.</h2>
+            </ng-template>
+            
+
+        </div>
+    </div>
+</div>

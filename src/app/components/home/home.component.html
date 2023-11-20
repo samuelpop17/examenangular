@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let cubo of cubos; let i=index">
+            <div class="card mb-4">
+                <img src="{{cubo.imagen}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{cubo.nombre}}</h5>
+                    <h5 class="card-title">{{cubo.valoracion}}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

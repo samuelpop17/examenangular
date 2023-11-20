@@ -1,0 +1,23 @@
+<h1>Seguridad login api</h1>
+
+<div style="width: 80%; margin: 0 auto;">
+    <form #insertForm="ngForm">
+        <label>Email</label>
+        <input type="text" class="form-control" #cajaemail name="cajaemail">
+        <label>name</label>
+        <input type="text" class="form-control" #cajaname name="cajaname">
+        <label>Password</label>
+        <input type="text" class="form-control" #cajapassword name="cajapassword">
+        <div class="text-end">
+            <button class="btn btn-outline-success" (click)="registro()">
+                Crear
+            </button>
+        </div>
+    </form>
+
+    <div  class="text-end">
+        <!-- Contenido que se mostrará si el token tiene más de 0 longitud -->
+        
+    </div>
+</div>
+

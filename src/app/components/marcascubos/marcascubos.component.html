@@ -1,0 +1,18 @@
+<div class="container mt-4">
+    <h1>Cubos de la marca {{marca}}</h1>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let cubo of cubos; let i=index">
+            <div class="card mb-4">
+                <img src="{{cubo.imagen}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{cubo.nombre}}</h5>
+                    <h5 class="card-title">{{cubo.valoracion}}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-body text-center">
+                    <a [routerLink]="['/detallescubos/',cubo.idCubo]" class="btn btn-outline-info">Detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

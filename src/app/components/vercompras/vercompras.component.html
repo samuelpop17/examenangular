@@ -1,0 +1,17 @@
+<div>
+    <table class="table table-bordered table-striped">
+      <tr>
+        <th>idCubo</th>
+        <th>idPedido</th>
+        <th>ID Usuario</th>
+        <th>fechaPedido</th>
+      </tr>
+      <tr *ngFor="let compra of compras">
+        <td>{{compra.idCubo}}</td>
+        <td>{{compra.idPedido}}</td>
+        <td>{{compra.idUsuario}}</td>
+        <td>{{compra.fechaPedido}}</td>
+      </tr>
+    </table>
+  </div>
+  
